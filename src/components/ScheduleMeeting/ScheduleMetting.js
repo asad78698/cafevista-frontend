@@ -11,7 +11,11 @@ export default function ScheduleMetting() {
     const handleContactForm = async (e) => {
         e.preventDefault()
 
+<<<<<<< Updated upstream
         const res = await fetch('https://cafevista-backend.vercel.app/', {
+=======
+        const res = await fetch('https://cafevista-frontend.vercel.app/home', {
+>>>>>>> Stashed changes
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
