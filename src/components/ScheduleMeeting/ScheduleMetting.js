@@ -11,7 +11,7 @@ export default function ScheduleMetting() {
     const handleContactForm = async (e) => {
         e.preventDefault()
 
-        const res = await fetch('http://localhost:8000/', {
+        const res = await fetch('https://cafevista-backend.vercel.app/home', {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json"
