@@ -1,0 +1,106 @@
+
+.features-container {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    /* background-color: #d0e3fc; */
+    border: 1px solid #04316D;
+    padding: 10px;  
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content:center;
+    text-align: left;
+    width: 350px;
+    
+  }
+  
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .banner-image {
+    background-image: url(https://images.unsplash.com/photo-1641326201918-3cafc641038e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    width: 325px;
+    border: 1px solid #04316D;
+  }
+  
+ .features-container h1{
+    font-family: 'Righteous', sans-serif;
+   margin-top:2%;
+    color: rgba(0, 0, 0, 0.98);
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  
+  .features-container .features-content {
+    color: #000000;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  
+ .features-container .button-wrapper{
+    margin-top: 1px;
+  }
+  
+  .features-container .btn {
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    font-size: 12px;
+    font-size: 0.8rem;  
+    letter-spacing: 2px;  
+    cursor: pointer;
+  }
+  
+ .features-container .btn + .btn {
+    margin-left: 10px;
+  }
+  
+  .outline {
+    background: transparent;
+    color: rgba(0, 212, 255, 0.9);
+    border: 1px solid rgba(0, 212, 255, 0.6);
+    transition: all .3s ease;
+    
+  }
+  
+  .outline:hover{
+    transform: scale(1.125);
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.9);
+    transition: all .3s ease;  
+  }
+  
+  .fill {
+    background: rgba(0, 212, 255, 0.9);
+    color: rgba(255,255,255,0.95);
+    filter: drop-shadow(0);
+    font-weight: bold;
+    transition: all .3s ease; 
+  }
+  
+  .fill:hover{
+    transform: scale(1.125);  
+    border-color: rgba(255, 255, 255, 0.9);
+    filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+    transition: all .3s ease;    
+  }
+  .feature-readmore{
+    color: #04316D;
+    transition-duration: .2s;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .feature-readmore:hover {
+    font-weight: 700;
+    transition-duration: .2s ease-in-out;
+  }

@@ -1,0 +1,251 @@
+.Ai-Integration-Feature-carousel {
+    height: 35rem;
+    width: 100%;
+  }
+  
+  .feature-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust the min width as needed */
+    grid-gap: 50px; /* Adjust the gap between cards */
+  }
+  .Emnbedded-System-bullet{
+    width: 15px;
+    height: 15px;
+    margin-right: 2%;
+  }
+  .bear-react-carousel__pagination-group {
+    bottom: -144px !important;
+  }
+  
+  .bear-react-carousel__slide-item {
+    display: flex;
+    justify-content: center;
+    height: 100% !important;
+  }
+  
+  .bear-react-carousel__content {
+    top: 5%;
+  }
+  
+  
+
+  .Emnbedded-System-custom-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(32, 6, 94); /* Border for visualization */
+    border-radius: 8px;
+    margin: 3px;
+    width: 90%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+   
+  }
+  
+  .Emnbedded-System-card-content{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .Emnbedded-System-card-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4%;
+    font-family: "Jost", sans-serif;
+    color: #04316d ;
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  .Emnbedded-System-card-content p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: left;
+    color: #000000;
+  }
+  
+  .Emnbedded-System-feature-readmore {
+    background-color: #0010f3;
+    color: white;
+    transition-duration: .2s;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    height: 40px;
+    width: 50%;
+  }
+  .bear-react-carousel__content {
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    max-width: 100%;
+    height: 30rem !important;
+    z-index: 1;
+    overflow: hidden;
+    position: var(--carousel-content-position);
+}
+  .Emnbedded-System-feature-readmore:hover {
+    background-color: #0056b3;
+  }
+  .bear-react-carousel__nav-button {
+    background-color: #04316d !important;
+    border-radius: 99em;
+    opacity: .6;
+    color: #04316d !important; 
+    /* color: #8f4e4e; */
+    outline: none;
+}
+  .Emnbedded-System-features-content  {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 100%;
+    /* height: 156px; */
+    color: rgb(0, 0, 0);
+  }
+  .Emnbedded-System-bullet-content  {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 100%;
+    /* height: 156px; */
+    color: rgb(0, 0, 0);
+  }
+  
+  /* .cut-text {
+    width: 98%;
+    height: 120px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  } */
+  
+  .Emnbedded-System-feature-readmore {
+    color: #ffffff;
+    background-color: #04316D;
+    transition-duration: .2s;
+    height: 40px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    width: auto;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+ 
+  .Emnbedded-System-feature-readmore:hover {
+    font-weight: 700;
+    transition-duration: .2s ease-in-out;
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .Emnbedded-System-custom-card {
+      
+      height: 25rem;
+  }
+  .bear-react-carousel__slide-item {
+    display: flex;
+    justify-content: center;
+    height: 100% !important; /* Ensure the slide item takes full height */
+  }
+  .bear-react-carousel__pagination-group {
+      bottom: -107px !important;
+  }
+  .Ai-Integration-Feature-carousel {
+    height: 18rem;
+    width: 100%;
+  }
+    .Emnbedded-System-card-contenth3 {
+      font-size: 1.1rem;
+    }
+    .Emnbedded-System-card-content p {
+      font-size: 1rem;
+    }
+    .cut-text {
+      -webkit-line-clamp: 6;
+    }
+    .Ai-Integration-Feature-carousel {
+      height: 30rem;
+  }
+  }
+  
+  @media only screen and (min-width: 368px) and (max-width: 767px) {
+   
+    .Emnbedded-System-custom-card {
+      
+      height: 31rem;
+  }
+  .bear-react-carousel__pagination-group {
+      bottom: -358px !important;
+  }
+  .Ai-Integration-Feature-carousel {
+    height: 28rem;
+    width: 100%;
+  }
+    .Emnbedded-System-card-content h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+    .Emnbedded-System-card-content p {
+      font-size: 1rem;
+    }
+    
+    .bear-react-carousel__content {
+   
+      height: 35rem !important;
+      
+  }
+    
+    .cut-text {
+      -webkit-line-clamp: 2;
+    }
+    .bear-react-carousel__nav-button {
+      
+      opacity: 0 ;
+     
+  }
+  }
+  @media only screen and (max-width:367px)  {
+    
+    .Emnbedded-System-custom-card {
+      
+      height: 31rem;
+  }
+  .bear-react-carousel__pagination-group {
+      bottom: -358px !important;
+  }
+  .Ai-Integration-Feature-carousel {
+    height: 28rem;
+    width: 100%;
+  }
+    .Emnbedded-System-card-content h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+    .Emnbedded-System-card-content p {
+      font-size: 1rem;
+    }
+    
+    
+    .cut-text {
+      -webkit-line-clamp: 2;
+    }
+    .bear-react-carousel__nav-button {
+      
+      opacity: 0 ;
+     
+  }
+  .bear-react-carousel__content {
+   
+    height: 35rem !important;
+    
+}
+  }

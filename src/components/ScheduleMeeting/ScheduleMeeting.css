@@ -1,0 +1,36 @@
+.submitbtn
+{
+    background-color: #04316D;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    height: 60px;
+    align-items: center;
+    transition:transform 0.5s ease-in;
+    
+}
+.submitbtn:hover{
+    transform: scale(0.9);
+    background-color: #04316D;
+    color: white;
+}
+.form-floating{
+    border: 1px solid #04316D;
+    border-radius: 6px;
+}
+
+
+/* Media Queries */
+@media only screen and (max-width:367px)  {
+.submitbtn{
+    width:150px;
+}
+.form-floating{
+    border: 1px solid #04316D;
+    border-radius: 6px;.form-floating{
+        border: 1px solid #04316D;
+        border-radius: 6px;
+    }
+}
+
+    }

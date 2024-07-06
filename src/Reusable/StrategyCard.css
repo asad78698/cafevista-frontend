@@ -1,0 +1,34 @@
+.strategy-card
+{
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgba(248, 248, 248, 0.664); */
+    background-color: #91949921;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width:230px;
+    border: 2px solid #04316d ;
+
+}
+
+.strategy-Pic-box {
+    width: auto;
+    height: auto;
+    /* border: 1px solid #04316d; */
+    /* margin-top: -12%; */
+}
+.Strategy-Text-box {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Strategy-Text-box h3{
+    font-family: "jost", sans-serif;
+    margin-top: 9%;
+    font-size: 19px;
+    font-weight: 700;
+    
+}

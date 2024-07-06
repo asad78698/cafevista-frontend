@@ -1,0 +1,122 @@
+/* slick-carousel default styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+/* additional custom styling for the carousel */
+.carousel-container {
+  margin: 20px;
+}
+
+.carousel-item {
+  padding: 10px;
+  text-align: center; /* Center-align text and inline elements */
+  background: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-item img {
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure image is treated as a block-level element */
+}
+
+.carousel-item h3 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.carousel-item p {
+  margin: 0 0 10px;
+}
+
+
+
+
+/* Custom styles for slick arrows */
+.slick-prev,
+.slick-next {
+  background-color: #04316D; /* Semi-transparent background */
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #04316D;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: white;
+}
+
+.slick-prev {
+  left: -20px; /* Position the previous arrow slightly outside the carousel */
+
+}
+
+.slick-next {
+  right: -20px; /* Position the next arrow slightly outside the carousel */
+}
+
+.card-button
+{
+    background-color: #04316D;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    height: 40px;
+    align-items: center;
+    transition:transform 0.5s ease-in;
+    
+}
+.card-button:hover{
+    transform: scale(0.9);
+    background-color: #04316D;
+    color: white;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+.slick-prev {
+    left: -34px;
+}
+
+.slick-next {
+    right: -34px;
+}
+}
+
+@media only screen and (min-width: 368px) and (max-width: 767px) {
+    .slick-prev {
+        opacity: 0;
+    }
+    
+    .slick-next {
+        opacity: 0;
+    }
+}
+@media only screen and (max-width:367px)  {
+    .slick-prev {
+        opacity: 0;
+    }
+    
+    .slick-next {
+        opacity: 0;
+    }
+}

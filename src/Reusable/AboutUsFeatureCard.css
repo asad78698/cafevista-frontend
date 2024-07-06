@@ -1,0 +1,114 @@
+.AboutUs-FeatureCard {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #04316D;
+    gap: 26px;
+    align-content: center;
+    width: 400px;
+    align-items: center;
+}
+
+.AboutUs-FeatureCard-left
+{
+    
+    height: 243px;
+    background-color: azure;
+}
+.AboutUs-FeatureCard-right
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    text-align: center;
+    justify-content: center;
+}
+.AboutUs-FeatureCardheading{
+
+    font-family: "jost", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #04316D;
+}
+.AboutUs-FeatureCard-description{
+    font-family: "jost", sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+    
+    .AboutUs-FeatureCard {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #04316D;
+        gap: 26px;
+        align-content: center;
+        width: 350px;
+        align-items: center;
+    }
+.AboutUs-FeatureCardheading {
+    font-size: 20px;
+    font-weight: 700;
+}
+.AboutUs-FeatureCard-description {
+    font-family: "jost", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+  }
+  @media only screen and (min-width:368px) and (max-width:767px)  {
+    
+    .AboutUs-FeatureCard {
+        display: flex;
+        flex-direction: column;
+        width: 342px;
+        border: 1px solid #04316D;
+        gap: 26px;
+    }
+    .AboutUs-FeatureCard-left {
+        width: 100%;
+    }
+    .AboutUs-FeatureCard-right {
+        text-align: center;
+        width: 90%;
+    }    
+
+    .AboutUs-FeatureCardheading {
+        font-weight: 500;
+        font-size:1.2em;
+    }
+    .AboutUs-FeatureCard-description{
+        font-family: "jost", sans-serif;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    
+  }
+  @media only screen and (max-width:367px)  {
+    
+    .AboutUs-FeatureCard {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        border: 1px solid #04316D;
+        gap: 26px;
+    }
+    .AboutUs-FeatureCard-left {
+        width: 100%;
+    }
+    .AboutUs-FeatureCard-right {
+        text-align: center;
+        width: 90%;
+    }    
+
+    .AboutUs-FeatureCardheading {
+        font-weight: 500;
+        font-size:1.2em;
+    }
+    .AboutUs-FeatureCard-description{
+        font-family: "jost", sans-serif;
+        font-size: 0.9em;
+        font-weight: 600;
+    }
+    
+  }

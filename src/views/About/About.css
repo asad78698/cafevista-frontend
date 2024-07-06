@@ -1,0 +1,833 @@
+/* About us */
+.Aboutus-section-heading{
+    display: flex;
+    justify-content: left;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  input[type=radio] {
+    display: none;
+  }
+  .About-us-container      /* Main Container of the About Us  */
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 120px 0px 0px 0px;
+  }
+  .About-us-text      /* Text of the About Us  */
+  {
+    width: 100%;
+    /* align-items: center; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .About-us-header{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Jost", sans-serif;
+  }
+  .About-us-description-text{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: justify;
+    font-family: "Jost", sans-serif;
+  }
+  
+  .About-us-cards {     /* Cards of the About Us  */
+    position: relative;
+    width: 100%;
+    height: 500px;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+  
+  .cards {               /* Card container for showing cards */
+    position: relative;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  
+  .card {               /* CSS for single Card */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease; /* Fade effect */
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .card-text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: white;
+    font-family: "Jost", sans-serif;
+    z-index: 1; /* Ensure text is on top of the image */
+    text-align: left; /* Align text to the left within the container */
+  }
+  
+  
+  .Card-heading {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .Card-description {
+    width: 100%;
+    font-size: 13px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1.4rem;
+  }
+  
+  
+  #item-1:checked ~ .cards #song-3,
+  #item-2:checked ~ .cards #song-1,
+  #item-3:checked ~ .cards #song-2 {
+    transform: translateX(-40%) scale(0.8);
+    opacity: 0.4;
+    /* z-index: 0; */
+  }
+  
+  #item-1:checked ~ .cards #song-2,
+  #item-2:checked ~ .cards #song-3,
+  #item-3:checked ~ .cards #song-1 {
+    transform: translateX(40%) scale(0.8);
+    opacity: 0.4;
+    /* z-index: 0; */
+  }
+  
+  #item-1:checked ~ .cards #song-1,
+  #item-2:checked ~ .cards #song-2,
+  #item-3:checked ~ .cards #song-3 {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  
+  .pic-ctn {
+    width: 100%;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    margin-top: 15vh;
+  }
+  
+  .pic-ctn > img {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  
+  
+  /* Youtube Video */
+  .Youtube-video
+  {
+    width: 90%;
+    height: auto;
+  }
+.video{
+  align-items: center;
+}
+  
+/* Services Section Css */
+
+.Services{
+    margin: 0px 0px 30px 0px;
+  }
+  .icon{
+    display: flex;
+    height: 35px;
+    width: 55px;
+    justify-content: center;
+    align-items: center;
+    background-color: #04316d;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+  .Section-heading{
+    display: flex;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  
+  .Services-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 10px;
+  }
+  /* Strategy */
+  .Strategy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .Strategy-grid-container
+  {
+    display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+  }
+  .strategy-content{
+    font-weight: 700;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+  }
+  /* Accomplishments */
+  .Facts{
+    background-image: linear-gradient(to right, #04316d, #018099);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    height: 250px;
+  }
+  
+  
+  /* Choose Us */
+  .Choose-us{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Choose-us-text{
+    width: 60%;
+    text-align: center;
+  }
+  .Choose-us-header{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Jost", sans-serif;
+  }
+  .Choose-us-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  .choose-us-submitbtm
+  {
+    background-color: #04316D;
+      color: white;
+      font-size: 18px;
+      font-weight: 400;
+      height: 60px;
+      align-items: center;
+      transition:transform 0.5s ease-in;
+      
+  }
+  .choose-us-submitbtm:hover{
+      transform: scale(0.9);
+      background-color: #04316D;
+      color: white;
+  }
+  /* hightlighted text */
+  .Highlight {
+    font-weight: 600;
+    background: linear-gradient(to right, #04316d, #018099);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: 'Jost';
+    color: transparent;
+    display: inline;
+}
+  
+  /* Features */
+ .About-us-features{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ }
+ 
+  .AboutUsContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .About-us-feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+.about-us-feature-heading{
+  font-size: 45px;
+      font-weight: 600;
+      font-family: "Jost", sans-serif;
+}
+.Note_container{
+  display: flex;
+  flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+}
+.Note{
+  
+  width: 85%;
+  text-align: center;
+}
+.Note p,span{
+  font-weight: 500;
+}
+
+  @media only screen and (min-width: 768px ) and (max-width: 1024px) {
+    .Aboutus-section-heading {
+        display: flex;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .About-us-container      /* Main Container of the About Us  */
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 60px 0px 0px 0px;
+    }
+    .About-us-cards {     /* Cards of the About Us  */
+      position: relative;
+      width: 100%;
+      height: 25rem;
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+    .About-us
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .About-us-text
+    {
+      font-weight: 900;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .Aboutus-text{
+      text-align: center;
+      font-size: 25px;
+      font-weight: 700;
+    }
+    .description-text{
+      font-size: 18px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .Card-description{
+    width: 100%;
+    font-size: 13px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1;
+    }
+    .icon{
+      display: flex;
+      height: 35px;
+      width: 35px;
+      justify-content: center;
+      align-items: center;
+      background-color: #04316d;
+      color: #ffffff;
+      border-radius: 50%;
+    }
+    .Services-grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .Facts{
+      font-size: 20px;
+      display: flex;
+      font-weight: 500;
+      height: auto;
+    }
+    .Choose-us-text{
+      width: 80%;
+      text-align: center;
+    }
+    .Choose-us-header{
+      font-size: 28px;
+      font-weight: 700;
+      font-family: "Jost", sans-serif;
+    }
+    .Choose-us-cards{
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+    .choose-us-submitbtm
+  {
+    
+      font-size: 16px;
+      font-weight: 300;
+      height: 50px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      transition:transform 0.5s ease-in;
+      
+  }
+  .Note p{
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .Note span{
+    font-weight: 400;
+      font-size: 16px;
+  }
+  .about-us-feature-heading {
+    font-size: 37px;
+  }
+  .Strategy-grid-container {
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .About-us-feature-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+  }
+
+  @media only screen and (min-width:368px) and (max-width:767px)  {
+    
+    .About-us-container      /* Main Container of the About Us  */
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 60px 0px 0px 0px;
+    }
+    .Aboutus-section-heading {
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+    }    
+    .About-us-cards {     /* Cards of the About Us  */
+      position: relative;
+      width: 100%;
+      height: 25rem;
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+    .About-us
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .About-us-text
+    {
+      font-weight: 600;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .About-us-header {
+      font-size: 22px;
+      font-weight: 600;
+      font-family: "Jost", sans-serif;
+  }
+  .About-us-container      /* Main Container of the About Us  */
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 60px 0px 0px 0px;
+    }
+    .About-us-cards {     /* Cards of the About Us  */
+      position: relative;
+      width: 100%;
+      height: 25rem;
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+  .About-us-description-text {
+    font-size: 16px;
+  }
+    .Aboutus-text{
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .description-text{
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .Card-description{
+        width: 100%;
+        font-size: 12px;
+        font-weight: 200;
+        text-align: left;
+        line-height: 12px;
+        }
+    .heading{
+      font-size: 20px;
+      font-weight: 300;
+      text-align: center;
+    }
+    .description{
+      font-size: 12px;
+      line-height: 1;
+      text-align: center;
+      font-weight: 200;
+    }
+  
+    .icon{
+      display: flex;
+      height: 35px;
+      width: 60px;
+      justify-content: center;
+      align-items: center;
+      background-color: #04316d;
+      color: #ffffff;
+      border-radius: 50%;
+    }
+    .Services-grid-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .Services-text{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .Facts{
+      font-size: 20px;
+      display: flex;
+      font-weight: 500;
+      height: auto;
+    }
+    .Choose-us-text{
+      width: 80%;
+      text-align: center;
+    }
+    .Choose-us-header{
+      font-size: 28px;
+      font-weight: 700;
+      font-family: "Jost", sans-serif;
+    }
+    .Choose-us-cards{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .choose-us-submitbtm
+  {
+    
+      font-size: 16px;
+      font-weight: 300;
+      height: 50px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      transition:transform 0.5s ease-in;
+      
+  }
+  .Note {
+        
+    width: 100%;
+    margin: 0 !important;
+}
+.Note p{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.about-us-feature-heading {
+  font-size: 27px;
+  font-weight: 600;
+}
+.Strategy-grid-container {
+    justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.strategy-content {
+  font-size: 16px;
+  font-weight: 600;
+  width: 99%;
+}
+.Note span{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.About-us-feature-container {
+  grid-template-columns: repeat(1, 1fr) !important ;
+  
+}
+  }
+  
+
+  @media only screen and (max-width:367px)  {
+    .learn-more{
+    width: auto;
+    height: 40px;
+    font-family: "jost", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    left:8.5%;
+    top: 80%;
+    }
+  
+    .cards {
+      position: relative;
+      width: 60%;
+      height: 80%;
+      margin: 10px 60px 10px 60px;
+      margin-bottom: 20px;
+    }
+    .Services-grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 10px;
+    }
+    
+    .card-text-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      padding:0 8px 0 8px;
+      color: white;
+      font-family: "Jost", sans-serif;
+      z-index: 1; /* Ensure text is on top of the image */
+      text-align: left; /* Align text to the left within the container */
+    }
+  
+    .text-container{
+      font-family: "jost", sans-serif;
+      font-size: 2.1rem;
+      line-height: 2.8rem;
+      width: 100%;
+      top: 32%;
+    }
+  
+    .About-us-container      /* Main Container of the About Us  */
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin: 60px 0px 0px 0px;
+    }
+    .About-us-cards {     /* Cards of the About Us  */
+      position: relative;
+      width: 100%;
+      height: 35rem;
+      transform-style: preserve-3d;
+      display: flex;
+      flex-direction: column;
+      justify-content: right;
+    }
+    .About-us
+    {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .About-us-text
+    {
+      font-weight: 900;
+        line-height: 1.2;
+        text-align: center;
+    }
+    .Aboutus-text{
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .description-text{
+      font-size: 12px;
+      font-weight: 500;
+      text-align: center;
+    }
+    .icon{
+      display: flex;
+      height: 35px;
+      width: 75px;
+      justify-content: center;
+      align-items: center;
+      background-color: #04316d;
+      color: #ffffff;
+      border-radius: 50%;
+    }
+  
+    .text-container{
+      font-family: "jost", sans-serif;
+      font-size: 2.1rem;
+      line-height: 2.8rem;
+      width: 100%;
+      top: 32%;
+    }
+    .card-heading {
+      font-size: 22px;
+      font-weight: 700;
+      /* margin-bottom: 10px; */
+    }
+    
+    .card-description {
+      width: 100%;
+      font-size: 12px;
+      font-weight: 200;
+      text-align: left;
+      line-height: 1.2rem;
+    }
+    
+    .Facts{
+      font-size: 20px;
+      display: flex;
+      font-weight: 500;
+      height: auto;
+    }
+    .Choose-us-text{
+      width: 80%;
+      text-align: center;
+    }
+    .Choose-us-header{
+      font-size: 28px;
+      font-weight: 700;
+      font-family: "Jost", sans-serif;
+    }
+    .Choose-us-cards{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .choose-us-submitbtm
+  {
+    
+      font-size: 16px;
+      font-weight: 300;
+      height: 50px;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      transition:transform 0.5s ease-in;
+      
+  }
+  
+  .Highlight{
+    text-align: center;
+  }
+  .About-us-header {
+    font-size: 28px;
+    font-weight: 800;
+    font-family: "Jost", sans-serif;
+  }
+  .Aboutus-section-heading {
+    display: block;
+    text-align: center !important;
+    font-size: 22px;
+    font-weight: 600;
+  }
+  .Note {
+        
+    width: 100%;
+    margin: 0 !important;
+}
+.Note p{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.about-us-feature-heading {
+  font-size: 27px;
+  font-weight: 600;
+}
+
+.Strategy-grid-container {
+    justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+.strategy-content {
+  font-weight: 700;
+  width: 99%;
+}
+.Note span{
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.About-us-feature-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+  }

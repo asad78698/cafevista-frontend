@@ -1,0 +1,107 @@
+/* Base navigation styles */
+.nav-class {
+    background-image: linear-gradient(to right, #04316d, #018099);
+    /* background-color: #04316d; */
+    /* border: 1px solid #04316d; */
+}
+
+.header-class {
+    background-color: white;
+}
+
+/* Center the nav items in the navbar */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex: 1; /* Allow the nav items to take the remaining space */
+    gap: 20px; /* Add spacing between nav items */
+}
+
+.navbar-nav .nav-item {
+    display: inline-block;
+    position: relative;
+}
+
+/* Align the logo to the left and social icons to the right */
+.navbar-brand {
+    flex: 0;
+}
+
+.navbar .social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+/* Main dropdown menu styling */
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    margin-top: 0;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+/* Show main dropdown menus on hover */
+.navbar .dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Submenu styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    z-index: 2000;
+}
+
+/* Show submenus on hover for submenus specifically */
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+/* Main dropdown item focus and hover states */
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #04387c;
+}
+.logo
+{
+    height: 60px;
+    width: 150px;
+}
+/* Ensuring proper display of dropdowns */
+.navbar .dropdown-menu.show {
+    display: block;
+}
+
+/* Custom styling for main dropdown items with arrows */
+.navbar .nav-item.dropdown > .nav-link::after {
+    /* content: ' ▾'; Add down arrow */
+    margin-left: 5px;
+    font-size: 0.8em;
+    color: white;
+}
+
+/* Remove arrows from submenu items */
+.dropdown-submenu > .dropdown-toggle::after {
+    content: ''; /* Remove arrow for submenu items */
+}
+
+/* Adjusting visibility of submenus within the parent dropdown */
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    z-index: 2000;
+}

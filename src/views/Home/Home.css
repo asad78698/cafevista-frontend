@@ -1,0 +1,973 @@
+body{
+  font-style: "jost",sans-serif;
+}
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.highlight {
+  background: linear-gradient(to right, #04316d, #018099);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Makes the text transparent, showing the background */
+  display: inline; /* Ensures the gradient spans only the text */
+}
+
+.text-container {
+  position: absolute;
+  top: 40%;
+  left: 2%;
+  width: 65%;
+  font-family: "Jost", sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem; 
+  line-height: 3.6rem;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  z-index: 2;
+}
+
+.learn-more {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 3px;
+  border-bottom: 2px solid #ffffff;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 1);
+  outline: none;
+  position: absolute;
+  top: 65%;
+  left: 3.8%;
+  text-decoration: none;
+  z-index: 2;
+  transition: transform 0.3s ease; 
+}
+
+.learn-more:hover {
+  transform: scale(1.1); /* Scale the button on hover */
+}
+
+.learn-more i {
+  margin-left: 5px;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.learn-more:hover i {
+  transform: scale(1.1); /* Scale the icon on hover */
+}
+
+/* About us */
+.aboutus-section-heading{
+  display: flex;
+  justify-content: left;
+  font-size: 22px;
+  font-weight: 600;
+}
+input[type=radio] {
+  display: none;
+}
+/* .aboutus-Image
+{
+  filter: blur(50%);
+} */
+.about-us-container      /* Main Container of the About Us  */
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 60px 0px 0px 0px;
+}
+.about-us-text      /* Text of the About Us  */
+{
+  width: 100%;
+    /* align-items: center; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-us-header{
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Jost", sans-serif;
+}
+.about-us-description-text{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: justify;
+  font-family: "Jost", sans-serif;
+}
+
+.about-us-cards {     /* Cards of the About Us  */
+  position: relative;
+  width: 100%;
+  height: 500px;
+  transform-style: preserve-3d;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
+
+.cards {               /* Card container for showing cards */
+  position: relative;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.card {               /* CSS for single Card */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.4s ease; /* Fade effect */
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: white;
+  font-family: "Jost", sans-serif;
+  z-index: 1; /* Ensure text is on top of the image */
+  text-align: left; /* Align text to the left within the container */
+}
+
+
+.card-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-description {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 200;
+  text-align: left;
+  line-height: 1.4rem;
+}
+
+
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2 {
+  transform: translateX(-40%) scale(0.8);
+  opacity: 0.4;
+  /* z-index: 0; */
+}
+
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1 {
+  transform: translateX(40%) scale(0.8);
+  opacity: 0.4;
+  /* z-index: 0; */
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3 {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.pic-ctn {
+  width: 100%;
+  height: 200px;
+}
+
+@keyframes display {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+
+.pic-ctn {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 15vh;
+}
+
+.pic-ctn > img {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: calc(50% - 100px);
+  opacity: 0;
+  animation: display 10s infinite;
+}
+
+img:nth-child(2) {
+  animation-delay: 2s;
+}
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+/* RoadMap */
+.RoadMap-grid-container
+{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  justify-items: center;
+  grid-row-gap: 40px;
+
+}
+
+/* Services Section Css */
+
+.services{
+  margin: 0px 0px 30px 0px;
+}
+.icon{
+  display: flex;
+  height: 35px;
+  width: 55px;
+  justify-content: center;
+  align-items: center;
+  background-color: #04316d;
+  color: #ffffff;
+  border-radius: 50%;
+}
+.section-heading{
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.services-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+}
+
+/* Accomplishments */
+.facts{
+  background-image: linear-gradient(to right, #04316d, #018099);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 250px;
+}
+
+
+/* Choose Us */
+.choose-us{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.choose-us-text{
+  width: 60%;
+  text-align: center;
+}
+.choose-us-header{
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Jost", sans-serif;
+}
+.choose-us-cards{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.Choose-us-submitbtm
+{
+  background-color: #04316D;
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    height: 60px;
+    align-items: center;
+    transition:transform 0.5s ease-in;
+    
+}
+.Choose-us-submitbtm:hover{
+    transform: scale(0.9);
+    background-color: #04316D;
+    color: white;
+}
+
+/* Features */
+
+.feature-heading{
+  font-size: 30px;
+    font-weight: 800;
+    font-family: "Jost", sans-serif;
+}
+/* Projects */
+.Project-heading{
+  font-size: 30px;
+    font-weight: 800;
+    font-family: "Jost", sans-serif;
+}
+
+.Projects
+{
+  margin-top: -18%;
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+/* Schedule Meeting */
+.schedule-meeting-container {
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.scheduleMeeting-left-column {
+  flex: 1;
+  
+}
+
+.scheduleMeeting-right-column {
+  flex: 1;
+}
+
+.scheduleMeeting-description{
+  top: 0.9%;
+  width: 80%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+/* Media Queries */
+
+@media only screen and (min-width: 768px ) and (max-width: 1024px) {
+  .learn-more{
+    width: auto;
+    height: 40px;
+    font-family: "jost", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    left:5.5%;
+    top:69%;
+  }
+  .text-container{
+    font-family: "jost", sans-serif;
+    font-size: 2.7rem;
+    line-height: 3.2rem;
+    width: 90%;
+    top: 35%;
+  }
+  .about-us-container      /* Main Container of the About Us  */
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 60px 0px 0px 0px;
+  }
+  .about-us-cards {     /* Cards of the About Us  */
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+  .about-us
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about-us-text
+  {
+    font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+  }
+  .aboutus-text{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  .description-text{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .Projects
+{
+  margin-top: 0%;
+}
+
+  .card-description{
+  width: 100%;
+  font-size: 13px;
+  font-weight: 200;
+  text-align: left;
+  line-height: 1;
+  }
+  .icon{
+    display: flex;
+    height: 35px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    background-color: #04316d;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+  .services-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .facts{
+    font-size: 20px;
+    display: flex;
+    font-weight: 500;
+    height: auto;
+  }
+  .schedule-meeting-container {
+    display: flex;
+    flex-direction: row;
+    
+  }
+  .scheduleMeeting-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .Schedulemeeting-heading{
+    font-size: 24px;
+    font-weight: 700;
+    align-items: center;
+  }
+  .scheduleMeeting-description{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .submitbtn{
+    width: 128px;
+  }
+  .choose-us-text{
+    width: 80%;
+    text-align: center;
+  }
+  .choose-us-header{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+  }
+  .choose-us-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .Choose-us-submitbtm
+{
+  
+    font-size: 16px;
+    font-weight: 300;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    transition:transform 0.5s ease-in;
+    
+}
+.RoadMap-grid-container
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  justify-items: center;
+  grid-row-gap: 40px;
+
+}
+}
+@media only screen and (min-width:368px) and (max-width:767px)  {
+  .learn-more{
+    width: auto;
+    height: 40px;
+    font-family: "jost", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    left:8.5%;
+    top: 80%;
+  }
+  .text-container{
+    font-family: "jost", sans-serif;
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+    width: 100%;
+    top: 32%;
+  }
+  .about-us-container      /* Main Container of the About Us  */
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 60px 0px 0px 0px;
+  }
+  .about-us-cards {     /* Cards of the About Us  */
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+  .about-us
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-us-text
+  {
+    font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+  }
+  .about-us-header {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: "Jost", sans-serif;
+}
+.about-us-container      /* Main Container of the About Us  */
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 60px 0px 0px 0px;
+  }
+  .about-us-cards {     /* Cards of the About Us  */
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+.about-us-description-text {
+  font-size: 16px;
+}
+  .aboutus-text{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .card-heading {
+    font-size: 22px;
+    font-weight: 700;
+    /* margin-bottom: 10px; */
+  }
+  
+  .card-description {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 12px;
+}
+  .description-text{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .heading{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+  }
+  .description{
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 200;
+  }
+
+  .icon{
+    display: flex;
+    height: 35px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: #04316d;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+  .services-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .services-text{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .facts{
+    font-size: 20px;
+    display: flex;
+    font-weight: 500;
+    height: auto;
+  }
+  .schedule-meeting-container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .scheduleMeeting-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .Schedulemeeting-heading{
+    font-size: 24px;
+    font-weight: 700;
+    align-items: center;
+  }
+  .scheduleMeeting-description{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .submitbtn{
+    width: 128px;
+  }
+  .choose-us-text{
+    width: 80%;
+    text-align: center;
+  }
+  .choose-us-header{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+  }
+  .choose-us-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Choose-us-submitbtm
+{
+  
+    font-size: 16px;
+    font-weight: 300;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    transition:transform 0.5s ease-in;
+    
+}
+.RoadMap-grid-container
+{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  justify-items: center;
+  grid-row-gap: 40px;
+
+}
+.Projects
+{
+  margin-top: 64%;
+}
+}
+
+@media only screen and (max-width:367px)  {
+  .learn-more{
+  width: auto;
+  height: 40px;
+  font-family: "jost", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  left:8.5%;
+  top: 80%;
+  }
+
+  .cards {
+    position: relative;
+    width: 60%;
+    height: 80%;
+    margin: 10px 60px 10px 60px;
+    margin-bottom: 20px;
+  }
+  
+  .card-text-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding:0 8px 0 8px;
+    color: white;
+    font-family: "Jost", sans-serif;
+    z-index: 1; /* Ensure text is on top of the image */
+    text-align: left; /* Align text to the left within the container */
+  }
+
+  .text-container{
+    font-family: "jost", sans-serif;
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+    width: 100%;
+    top: 32%;
+  }
+
+  .about-us-container      /* Main Container of the About Us  */
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 60px 0px 0px 0px;
+  }
+  .about-us-cards {     /* Cards of the About Us  */
+    position: relative;
+    width: 100%;
+    height: 35rem;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+  }
+  .about-us
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about-us-text
+  {
+    font-weight: 900;
+      line-height: 1.2;
+      text-align: center;
+  }
+  .aboutus-text{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .description-text{
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .icon{
+    display: flex;
+    height: 35px;
+    width: 75px;
+    justify-content: center;
+    align-items: center;
+    background-color: #04316d;
+    color: #ffffff;
+    border-radius: 50%;
+  }
+
+  .text-container{
+    font-family: "jost", sans-serif;
+    font-size: 2.1rem;
+    line-height: 2.8rem;
+    width: 100%;
+    top: 32%;
+  }
+  .card-heading {
+    font-size: 22px;
+    font-weight: 700;
+    /* margin-bottom: 10px; */
+  }
+  
+  .card-description {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: left;
+    line-height: 1.2rem;
+  }
+  .services-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .facts{
+    font-size: 20px;
+    display: flex;
+    font-weight: 500;
+    height: auto;
+  }
+  .schedule-meeting-container {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .scheduleMeeting-left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .Schedulemeeting-heading{
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+  }
+  .scheduleMeeting-description{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 300;
+  }
+  .choose-us-text{
+    width: 80%;
+    text-align: center;
+  }
+  .choose-us-header{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+  }
+  .choose-us-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .Choose-us-submitbtm
+{
+  
+    font-size: 16px;
+    font-weight: 300;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    transition:transform 0.5s ease-in;
+    
+}
+.Project-heading {
+  font-size: 28px;
+        font-weight: 700;
+        font-family: "Jost", sans-serif;
+}
+.feature-heading{
+  font-size: 28px;
+        font-weight: 700;
+        font-family: "Jost", sans-serif;
+}
+.highlight{
+  text-align: center;
+}
+.about-us-header {
+  font-size: 28px;
+  font-weight: 800;
+  font-family: "Jost", sans-serif;
+}
+.aboutus-section-heading {
+  display: block;
+  text-align: center !important;
+  font-size: 22px;
+  font-weight: 600;
+}
+.RoadMap-grid-container
+{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  justify-items: center;
+  grid-row-gap: 20px;
+
+}
+.Projects
+{
+  margin-top: 64%;
+}
+}

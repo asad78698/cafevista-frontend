@@ -1,0 +1,164 @@
+.roadmap-card
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(248, 248, 248, 0.664);
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width:280px;
+    border: 2px solid #04316d ;
+
+}
+.Number-box {
+    margin-top: -9% !important;
+    left: -48% !important;
+    z-index: 1 !important;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #04316d ;
+    position: relative;
+    display: flex;
+    color: white;
+    justify-content: center;
+}
+.Number-box h2{
+    text-align: center;
+    font-family: "jost", sans-serif;
+    font-size: 26px !important;
+    font-weight: 700 !important;
+}
+.Pic-box {
+    width: 95%;
+    height: 250px;
+    border: 1px solid #04316d;
+    margin-top: -12%;
+}
+.Text-box {
+    width: 90%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.Text-box h3{
+    font-family: "jost", sans-serif;
+    margin-top: 9%;
+    font-size: 20px;
+    font-weight: 700;
+}
+.text-conent {
+    font-family: "jost", sans-serif;
+    margin-top: 3%;
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    .roadmap-card
+{
+    
+    width:220px;
+
+}
+.Number-box {
+    
+    width: 50px;
+    height: 50px;
+   
+}
+.Number-box h2{
+   
+    font-size: 23px !important;
+    font-weight: 700 !important;
+}
+.Pic-box {
+    height: 200px;
+    
+}
+
+.Text-box h3{
+    
+    font-size: 19px;
+    
+}
+.text-conent {
+    
+    font-size: 13px;
+    
+}
+    }
+
+@media only screen and (min-width: 368px) and (max-width: 767px) {
+    .roadmap-card
+    {
+        
+        width:220px;
+    
+    }
+    .Number-box {
+        
+        width: 50px;
+        height: 50px;
+       
+    }
+    .Number-box h2{
+       
+        font-size: 23px !important;
+        font-weight: 700 !important;
+    }
+    .Pic-box {
+        height: 200px;
+        
+    }
+    
+    .Text-box h3{
+        
+        font-size: 19px;
+        
+    }
+    .text-conent {
+        
+        font-size: 13px;
+        
+    }
+}
+
+@media only screen and (max-width: 367px) {
+    .roadmap-card
+    {
+        
+        width:220px;
+    
+    }
+    .Number-box {
+        
+        width: 50px;
+        height: 50px;
+       
+    }
+    .Number-box h2{
+       
+        font-size: 23px !important;
+        font-weight: 700 !important;
+    }
+    .Pic-box {
+        height: 200px;
+        
+    }
+    
+    .Text-box h3{
+        
+        font-size: 19px;
+        
+    }
+    .text-conent {
+        
+        font-size: 13px;
+        
+    }
+}

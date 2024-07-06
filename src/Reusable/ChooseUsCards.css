@@ -1,0 +1,77 @@
+.choose-us-card {
+    width: 300px;
+    height: auto;
+    border: 1px solid #04316D;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 30px;
+    gap: 13px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+  }
+  
+  
+  
+  .ChooseUsHeading {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: rgb(26, 26, 26);
+  }
+  
+  .ChooseUsDescription {
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgb(99, 99, 99);
+  }
+  
+  .buttonContainer {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+  }
+  
+  .readmore {
+    
+    color: #0010f3;
+    transition-duration: .2s;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .readmore:hover {
+    font-weight: 700;
+    transition-duration: .2s ease-in-out;
+  }
+
+  @media only screen and (min-width: 768px ) and (max-width: 1024px){
+    .choose-us-card {
+      width: 240px;
+      height: auto;
+      border: 1px solid #04316D;
+      background-color: rgb(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 5px 10px;
+      gap: 13px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.062);
+    }
+    .ChooseUsHeading {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .hero-image{
+      width: 80px;
+      height: 80px;
+    }
+  }

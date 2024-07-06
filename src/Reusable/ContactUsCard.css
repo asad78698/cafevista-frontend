@@ -1,0 +1,146 @@
+.ContactUsCard {
+    height: 220px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #04316D;
+    align-items: center;
+    margin-top: 58px;
+    box-shadow: rgba(30, 63, 172, 0.25) 0px 25px 50px -12px;
+    transition: transform 0.5s; /* Adjust the transition duration */
+    transform-style: preserve-3d; /* Apply to the parent */
+}
+
+.first-part {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #04316D;
+    align-self: center;
+    border: 5px solid #04316D;
+    color: white;
+    text-align: center;
+    margin-top: -53px;
+}
+
+.first-part h1 {
+    font-size: 3rem;
+}
+
+.second-part {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.second-part p {
+    width: 90%;
+    padding-top: 7%;
+    text-align: center;
+    font-family: "jost", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.ContactUsCard:hover {
+    transform: scale(1.1); /* Apply rotation only to the hovered card */
+}
+
+
+@media only screen and (min-width: 768px ) and (max-width: 1024px){
+.ContactUsCard {
+    height: 181px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    box-shadow: rgba(125, 111, 255, 0.35) 0px 5px 15px;
+    transition: none;
+    transform-style: preserve-3d;
+}
+.second-part p {
+    width: 90%;
+    padding-top: 2%;
+    text-align: center;
+    font-family: "jost", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.first-part {
+    width: 75px;
+    height: 80px;
+    margin-top: -33px;
+}
+
+.first-part h1 {
+    font-size: 3rem;
+}
+
+}
+@media only screen and (min-width:368px) and (max-width:767px)  {
+    .ContactUsCard {
+        height: 170px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        box-shadow: rgba(125, 111, 255, 0.35) 0px 5px 15px;
+        transition: none;
+        
+    }
+    .second-part p {
+        width: 90%;
+        padding-top: 2%;
+        text-align: center;
+        font-family: "jost", sans-serif;
+        font-size: 1rem;
+        font-weight: 650;
+    }
+    .first-part {
+        width: 60px;
+        height: 60px;
+        margin-top: -31px;
+    }
+    
+    .first-part h1 {
+        font-size: 2.4rem;
+    }
+    
+}
+@media only screen and (max-width:367px)
+{
+    .ContactUsCard {
+        height: 170px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        box-shadow: rgba(125, 111, 255, 0.35) 0px 5px 15px;
+        transition: none;
+        
+    }
+    .second-part p {
+        width: 90%;
+        padding-top: 2%;
+        text-align: center;
+        font-family: "jost", sans-serif;
+        font-size: 1rem;
+        font-weight: 650;
+    }
+    .first-part {
+        width: 60px;
+        height: 60px;
+        margin-top: -31px;
+    }
+    
+    .first-part h1 {
+        font-size: 2.4rem;
+    }
+}

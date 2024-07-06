@@ -1,0 +1,19 @@
+.terms-heading{
+    color: #04316d;
+
+}
+.section-title
+{
+color: #04316d;
+}
+.heading-termCondition p ul li{
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+@media only screen and (min-width:368px) and (max-width:767px)  {
+    .heading-termCondition p ul li{
+        font-size: 20px;
+        line-height: 2rem;
+    }
+}
