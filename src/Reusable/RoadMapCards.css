@@ -3,21 +3,21 @@
     display: flex;
     flex-direction: column;
     background-color: rgba(248, 248, 248, 0.664);
-    height: auto;
+    height: 295px;
     justify-content: center;
     align-items: center;
-    width:280px;
+    width:230px;
     border: 2px solid #04316d ;
 
 }
 .Number-box {
-    margin-top: -9% !important;
+    margin-top: -7% !important;
     left: -48% !important;
     z-index: 1 !important;
     align-items: center;
-    width: 70px;
+    width: 48px;
     height: 70px;
-    background-color: #04316d ;
+    background-color: #04316d;
     position: relative;
     display: flex;
     color: white;
@@ -30,9 +30,9 @@
     font-weight: 700 !important;
 }
 .Pic-box {
-    width: 95%;
-    height: 250px;
-    border: 1px solid #04316d;
+    width: 78%;
+    height: 152px;
+    /* border: 1px solid #04316d; */
     margin-top: -12%;
 }
 .Text-box {

@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './DesktopApplications.css';
 import html from "../../assets/html.png";
@@ -9,20 +8,19 @@ import php from "../../assets/php.png";
 import mean from "../../assets/mean.png";
 import mern from "../../assets/mern.png";
 import lamp from "../../assets/lamp.png";
-const WebApplications = () => {
-  // Array containing card data
-  const cards = [
-    { id: 1, text: 'HTM/CSS', image: html, backgroundColor: '#790C33' },
-    { id: 2, text: 'JavaScript Framework', image: java, backgroundColor: '#0d1137' },
-    { id: 3, text: 'Node.js', image: nodecode, backgroundColor: '#077b8a' },
-    { id: 4, text: 'Python/Django', image: python, backgroundColor: '#5c3c92' },
-    { id: 5, text: 'PHP/Laravel', image: php, backgroundColor: '#530837' },
-    { id: 6, text: 'MEAN Stack', image: mean, backgroundColor: '#796716' },
-    { id: 7, text: 'MERN Stack', image: mern, backgroundColor: '#322514'},
-    { id: 8, text: 'LAMP Stack', image: lamp, backgroundColor: '#3b4d61'},
-    
-  ];
 
+const cards = [
+  { id: 1, text: 'HTML/CSS', image: html, backgroundColor: '#790C33' },
+  { id: 2, text: 'JavaScript Frameworks', image: java, backgroundColor: '#0d1137' },
+  { id: 3, text: 'Node.js', image: nodecode, backgroundColor: '#077b8a' },
+  { id: 4, text: 'Python/Django', image: python, backgroundColor: '#5c3c92' },
+  { id: 5, text: 'PHP/Laravel', image: php, backgroundColor: '#530837' },
+  { id: 6, text: 'MEAN Stack', image: mean, backgroundColor: '#796716' },
+  { id: 7, text: 'MERN Stack', image: mern, backgroundColor: '#322514' },
+  { id: 8, text: 'LAMP Stack', image: lamp, backgroundColor: '#3b4d61' },
+];
+
+const WebApplications = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = cards.length;
   const cardsToShow = 6;
@@ -51,8 +49,10 @@ const WebApplications = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

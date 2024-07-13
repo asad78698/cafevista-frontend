@@ -6,12 +6,13 @@ import hybrif from "../../assets/hybrid.png";
 import unity from "../../assets/unity.png";
 import unreal from "../../assets/unreal.png";
 import game from "../../assets/Gameeee.png";
+
 const cards = [
   { id: 1, text: 'iOS App Development', image: ios, backgroundColor: '#00732e' },
   { id: 2, text: 'Andriod App Development', image: andriod, backgroundColor: '#863B1B' },
   { id: 3, text: 'Hybrid App Development', image: hybrif, backgroundColor: '#003912' },
   { id: 4, text: 'Unity 3D Development', image: unity, backgroundColor: '#4d1727' },
-  { id: 5, text: 'Unreal Engine Game', image: unreal, backgroundColor: '#215330' }, // Corrected image
+  { id: 5, text: 'Unreal Engine Game', image: unreal, backgroundColor: '#215330' },
   { id: 6, text: 'Mobile Game Development', image: game, backgroundColor: '#421300' },
 ];
 
@@ -43,8 +44,10 @@ const AppGameDevelopment = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

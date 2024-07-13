@@ -1,93 +1,95 @@
-import ideaGeneration from "../assets/gifs/IdeaGneration.gif";
-import settingUP from "../assets/gifs/SettingUp.gif";
-import productdevelopment from "../assets/gifs/ProductDevelopment.gif";
-import marketing from "../assets/gifs/MarketingSales.gif";
-import operation from "../assets/gifs/OpeartionManagement.gif";
-import growth from "../assets/gifs/GrowthScaling.gif";
-import optimzation from "../assets/gifs/OptimizationImporvement.gif";
-import learningTogether from "../assets/gifs/learningtogether.gif";
+import ideaGeneration from "../assets/gifs/IdeaGneration.png";
+import settingUP from "../assets/gifs/SettingUp.png";
+import productdevelopment from "../assets/gifs/ProductDevelopment.png";
+import marketing from "../assets/gifs/MarketingSales.png";
+import operation from "../assets/gifs/OpeartionManagement.png";
+import growth from "../assets/gifs/GrowthScaling.png";
+import optimization from "../assets/gifs/OptimizationImporvement.png";
+import learningTogether from "../assets/gifs/learningtogether.png";
+import financing from "../assets/gifs/financing.png";
+import networking from "../assets/gifs/networking.png";
 
 const RoadMapDataArray = [
     {
         id: "0",
         number: "1",
         image: ideaGeneration,
-        heading: "Idea Generation",
-        bullet1: "Product/Service Concept",
-        bullet2: "Market Research",
-        bullet3: "Business Planning",
+        heading: "Idea",
+        bullet1: "Generate innovative ideas and assess their feasibility.",
         url: "/contactus"
     },
-
     {
         id: "1",
         number: "2",
         image: settingUP,
-        heading: "Setting Up",
-        bullet1: "Online Presence (Website, Social Media)",
-        bullet2: "Branding (Logo, Identity)",
-        bullet3: "Legal Setup (Registration, Licenses)",
+        heading: "Setup",
+        bullet1: "Establish a solid foundation with strategic planning.",
         url: "/contactus"
     },
     {
         id: "2",
         number: "3",
         image: productdevelopment,
-        heading: "Product Development",
-        bullet1: "Software Development",
-        bullet2: "Hardware Development",
-        bullet3: "Product Sourcing",
+        heading: "Development",
+        bullet1: "Design and develop products with expert teams.",
         url: "/contactus"
     },
     {
         id: "3",
         number: "4",
         image: marketing,
-        heading: "Marketing & Sales",
-        bullet1: "Digital Marketing (SEO, Ads)",
-        bullet2: "E-commerce Solutions",
-        bullet3: "Sales Funnel Optimization",
+        heading: "Marketing",
+        bullet1: "Craft compelling marketing strategies for successful launches.",
         url: "/contactus"
     },
     {
         id: "4",
         number: "5",
         image: operation,
-        heading: "Operations & Management",
-        bullet1: "Automation & Integration",
-        bullet2: "Supply Chain Management",
-        bullet3: "Customer Service",
+        heading: "Operations",
+        bullet1: "Streamline operations for efficient business management.",
         url: "/contactus"
     },
     {
         id: "5",
         number: "6",
         image: growth,
-        heading: "Growth & Scaling",
-        bullet1: "Investment & Funding",
-        bullet2: "Partnerships & Collaborations",
-        bullet3: "Data Analysis & Insights",
+        heading: "Growth",
+        bullet1: "Implement growth tactics to scale your business.",
         url: "/contactus"
     },
     {
         id: "6",
         number: "7",
-        image: optimzation,
-        heading: "Optimization & Improvement",
-        bullet1: "Performance Monitoring",
-        bullet2: "Continuous Improvement",
-        bullet3: "Innovation & R&D",
+        image: optimization,
+        heading: "Optimize",
+        bullet1: "Enhance processes to improve performance and efficiency.",
         url: "/contactus"
     },
     {
         id: "7",
         number: "8",
         image: learningTogether,
-        heading: "Let's Learn Together",
-        bullet1: "Community Engagement",
-        bullet2: "Knowledge Sharing",
-        bullet3: "Collaborative Workshops",
+        heading: "Learn",
+        bullet1: "Utilize continuous learning for ongoing improvement.",
+        url: "/contactus"
+    },
+    {
+        id: "8",
+        number: "9",
+        image: financing,
+        heading: "Finance",
+        bullet1: "Secure financial resources and manage budgets effectively.",
+        url: "/contactus"
+    },
+    {
+        id: "9",
+        number: "10",
+        image: networking,
+        heading: "Network",
+        bullet1: "Build and leverage professional relationships and networks.",
         url: "/contactus"
     }
-]
+];
+
 export default RoadMapDataArray;

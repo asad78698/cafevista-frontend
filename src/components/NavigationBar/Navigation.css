@@ -1,14 +1,32 @@
 /* Base navigation styles */
 .nav-class {
-    background-image: linear-gradient(to right, #04316d, #018099);
-    /* background-color: #04316d; */
-    /* border: 1px solid #04316d; */
+    background: transparent; /* Initial transparent background */
+    transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition for background and padding */
+    padding: 15px 0; /* Initial padding */
+    box-shadow: none; /* No shadow initially */
 }
 
+.scrolled {
+    /* background-image: linear-gradient(to right, #04316d, #018099); Gradient background on scroll */
+    background-color: rgb(248, 244, 244);
+    padding: 10px 0; /* Reduced padding on scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow to give it a raised effect */
+}
+
+/* Styles for the header section above the navigation bar */
 .header-class {
-    background-color: white;
+    background-color: #04316d; /* White background for the top bar */
 }
 
+.mininavtext
+{
+    color: white !important;
+}
+.navtext
+{
+    color: #00204b !important ;
+    font-weight: 700;
+}
 /* Center the nav items in the navbar */
 .navbar-nav {
     display: flex;
@@ -72,14 +90,15 @@
 /* Main dropdown item focus and hover states */
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: #f8f9fa;
+    background-color: #fcfdff;
     color: #04387c;
 }
-.logo
-{
+
+.logo {
     height: 60px;
-    width: 150px;
+    width: 135px;
 }
+
 /* Ensuring proper display of dropdowns */
 .navbar .dropdown-menu.show {
     display: block;
@@ -90,7 +109,7 @@
     /* content: ' ▾'; Add down arrow */
     margin-left: 5px;
     font-size: 0.8em;
-    color: white;
+    color: #04316d;
 }
 
 /* Remove arrows from submenu items */
@@ -104,4 +123,31 @@
     left: 100%;
     margin-top: -1px;
     z-index: 2000;
+}
+
+/* Hover effect for nav links */
+.custom-hover:hover {
+    color: #2a006e; /* Change the color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    font-weight: 600; /* Increase font weight on hover */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and transform */
+}
+
+.custom-hover:active {
+    color: #120052 !important; /* Keep hover color on active state */
+    transform: scale(1.1); /* Keep transform on active state */
+    font-weight: 600; /* Keep font weight on active state */
+}
+
+/* Additional styling for the top bar text */
+.top-bar small {
+    color: #04387c; /* Text color for the top bar */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* Light border color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%2833, 37, 41, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Light icon color */
 }

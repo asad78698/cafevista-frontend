@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './DesktopApplications.css';
 import unity from "../../assets/unity.png";
@@ -8,19 +7,16 @@ import training from "../../assets/training.png";
 import ads from "../../assets/ads.png";
 import content from "../../assets/content.png";
 
+const cards = [
+  { id: 1, text: 'Unreal Engine Simulators', image: unreal, backgroundColor: '#215330' },
+  { id: 2, text: 'Unity-based Simulations', image: unity, backgroundColor: '#4d1727' },
+  { id: 3, text: 'VR Applications Development', image: vrs, backgroundColor: '#0e6867' },
+  { id: 4, text: 'VR Training Solutions', image: training, backgroundColor: '#8f0f6f' },
+  { id: 5, text: 'AR App Development', image: ads, backgroundColor: '#421300' },
+  { id: 6, text: 'AR Marketing Solutions', image: content, backgroundColor: '#254200' },
+];
 
 const Simulators = () => {
-  // Array containing card data
-  const cards = [
-    { id: 1, text: 'Unreal Engine Simulators', image: unreal, backgroundColor: '#215330' },
-    { id: 2, text: 'Unity-bsed Simulations', image: unity, backgroundColor: '#4d1727' },
-    { id: 3, text: 'VR Applications Development', image: vrs, backgroundColor: '#0e6867' },
-    { id: 4, text: 'VR Training Solutions', image: training, backgroundColor: '#8f0f6f' },
-    { id: 5, text: 'AR App Development', image: ads, backgroundColor: '#421300' },
-    { id: 6, text: 'AR Marketing Solutions', image: content, backgroundColor: '#254200' },
-    
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = cards.length;
   const cardsToShow = 6;
@@ -49,8 +45,10 @@ const Simulators = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

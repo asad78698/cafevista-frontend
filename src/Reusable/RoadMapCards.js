@@ -19,9 +19,8 @@ export default function RoadMapCards() {
         
         <div className='Text-box'>
             <h3>{data.heading}</h3>
-            <p className='text-conent' onClick={clickFunction}><img src={bullet} style={{width:"20px", height:"30px", marginRight:"1%"}}/>{data.bullet1}</p>
-            <p className='text-conent' onClick={clickFunction}><img src={bullet} style={{width:"20px", height:"30px", marginRight:"1%"}}/>{data.bullet2}</p>
-            <p className='text-conent' onClick={clickFunction}><img src={bullet} style={{width:"20px", height:"30px", marginRight:"1%"}}/>{data.bullet3}</p>
+            <p className='text-conent' onClick={clickFunction}>{data.bullet1}</p>
+           
 
         </div>
     </div>

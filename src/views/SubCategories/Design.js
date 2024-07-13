@@ -43,8 +43,10 @@ const Design = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

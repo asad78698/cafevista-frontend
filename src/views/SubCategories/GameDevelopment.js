@@ -9,23 +9,19 @@ import unreal from "../../assets/unreal.png";
 import simu from "../../assets/simulation.png";
 import training from "../../assets/training.png";
 
+const cards = [
+  { id: 1, text: '2D Game Development', image: three, backgroundColor: '#896e12' },
+  { id: 2, text: '3D Game Development', image: two, backgroundColor: '#8f7e0f' },
+  { id: 3, text: 'AR/VR Game Development', image: vr, backgroundColor: '#8f0f7b' },
+  { id: 4, text: 'Unreal Engine Development', image: unreal, backgroundColor: '#215330' },
+  { id: 5, text: 'Unity Development', image: unity, backgroundColor: '#4d1727' },
+  { id: 6, text: 'Simulation Software', image: simu, backgroundColor: '#19680e' },
+  { id: 7, text: 'Training Simulators', image: training, backgroundColor: '#8f0f6f' },
+  { id: 8, text: 'Virtual Reality Simulations', image: vrs, backgroundColor: '#0e6867' },
+  // Add more cards as needed
+];
+
 const GameDevelopment = () => {
-  // Array containing card data
-  const cards = [
-    { id: 1, text: '2D Game Development', image: three, backgroundColor: '#896e12' },
-    { id: 2, text: '3D Game Development', image: two, backgroundColor: '#8f7e0f' },
-    { id: 3, text: 'AR/VR Game Development', image: vr, backgroundColor: '#8f0f7b' },
-    { id: 4, text: 'Unreal Engine Development', image: unreal, backgroundColor: '#215330' },
-    { id: 5, text: 'Unity Development', image: unity, backgroundColor: '#4d1727' },
-    { id: 6, text: 'Simulation Software', image: simu, backgroundColor: '#19680e'},
-    { id: 7, text: 'Training Simulators', image: training, backgroundColor: '#8f0f6f'},
-
-    { id: 8, text: 'Virtual Reality Simulations', image: vrs, backgroundColor: '#0e6867'},
-
-   
-    // Add more cards as needed
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = cards.length;
   const cardsToShow = 6;
@@ -54,8 +50,10 @@ const GameDevelopment = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

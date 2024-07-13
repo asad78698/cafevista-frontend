@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './DesktopApplications.css';
 import tools from "../../assets/automationtool.png";
@@ -7,6 +6,7 @@ import rpabus from "../../assets/rpabusiness.png";
 import rpacons from "../../assets/rpaconsultant.png";
 import crm from "../../assets/crm.png";
 import crmm from "../../assets/crmm.png";
+
 const BusinessAutomation = () => {
   // Array containing card data
   const cards = [
@@ -15,8 +15,7 @@ const BusinessAutomation = () => {
     { id: 3, text: 'RPA Development', image: rpabus, backgroundColor: '#006666' },
     { id: 4, text: 'RPA Consulting', image: rpacons, backgroundColor: '#004c4c' },
     { id: 5, text: 'CRM System Development', image: crm, backgroundColor: '#14607B' },
-    { id: 6, text: 'Crm Integration', image: crmm, backgroundColor: '#A68131' },
-    
+    { id: 6, text: 'CRM Integration', image: crmm, backgroundColor: '#A68131' },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,8 +46,10 @@ const BusinessAutomation = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

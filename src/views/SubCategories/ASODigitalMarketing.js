@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './DesktopApplications.css';
 import keyword from "../../assets/keyword.png";
@@ -8,6 +7,7 @@ import seo from "../../assets/seo.png";
 import social from "../../assets/sociall.png";
 import ads from "../../assets/ads.png";
 import content from "../../assets/content.png";
+
 const ASODigitalMarketing = () => {
   // Array containing card data
   const cards = [
@@ -49,8 +49,10 @@ const ASODigitalMarketing = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>

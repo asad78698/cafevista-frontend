@@ -1,13 +1,6 @@
-import React from 'react';
-// import ServiceDomainCards from "../../Reusable/ServiceDomainCards";
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import "./Service.css";
-// import MarketPlaceCards from '../../Reusable/MarketPlaceCards';
-// import AiIntegration from '../SubCategories/AiIntegration/AiIntegration';
-// import EmbeddedSystem from '../SubCategories/EmbeddedSystem/EmbeddedSystem';
-// import AiLearning from '../SubCategories/AiLearning/AiLearning';
-// // import Ecommerce from '../SubCategories/Ecommerce/Ecommerce';
-// import SearchOptimization from "../SubCategories/SearchOptimization/SearchOptimization";
-import { useNavigate } from "react-router-dom";
 import services from "../../assets/c2.jpeg";
 import DesktopApplications from "../SubCategories/DesktopApplications";
 import Embeddedsystem from "../SubCategories/EmbedddedSystem";
@@ -20,165 +13,112 @@ import WebApplications from '../SubCategories/WebApplications';
 import Simulators from '../SubCategories/Simulators';
 import BusinessAutomation from '../SubCategories/BusinessAutomation';
 import Design from "../SubCategories/Design";
+
 export default function Service() {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleClick=()=>{
+  // Handle navigation to contact us
+  const handleClick = () => {
     navigate("/contactUs");
   }
+
+  // Scroll to the element when the location changes
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        // Scroll into view with smooth behavior
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <div className='services'>
       <div className='services-background'>
-        <div className='left-services-background '>
+        <div className='left-services-background'>
           <h3> Our Solutions</h3>
           <p>We specialize in developing world-class solutions for Startups, SMEs, and 
-            Large Enterprises, Our work speaks for itself!</p>
-           <div className="Service-button">
-           <button class="button-17" role="button" onClick={handleClick}> Book Free Consulation </button>
-            </div> 
-
+            Large Enterprises. Our work speaks for itself!</p>
+          <div className="Service-button">
+            <button className="button-17" role="button" onClick={handleClick}>
+              Book Free Consultation
+            </button>
+          </div>
         </div>
         <div className='right-services-background'>
-          <img src={services}/>
-          </div>
+          <img src={services} alt="Services"/>
+        </div>
       </div>
 
       {/* Software Applications */}
-      <div className='subservices'>
-        <h2> Software Applications</h2>
+      <section id='softwareservices'>
+      <div className='subservices' >
+        <h2>Software Applications</h2>
       </div>
-      <DesktopApplications/>
+      <DesktopApplications />
+      </section>
 
       {/* Embedded System */}
-      <div className='subservices'>
+      <div className='subservices' id='embeddedservices'>
         <h2>Embedded System</h2>
       </div>
-      <Embeddedsystem/>
+      <Embeddedsystem />
 
       {/* E-commerce */}
-      <div className='subservices'>
+      <div className='subservices' id='ecommerceservices'>
         <h2>E-commerce System</h2>
       </div>
-      <Ecommerce/>
-
+      <Ecommerce />
 
       {/* App Game Development */}
-      <div className='subservices'>
+      <div className='subservices' id='appgamedevelopment'>
         <h2>App & Game Development</h2>
       </div>
-      <AppGameDevelopment/>
+      <AppGameDevelopment />
 
       {/* Game Development */}
-      <div className='subservices'>
+      <div className='subservices' id='gamedevelopment'>
         <h2>Game Development</h2>
       </div>
-      <GameDevelopment/>
+      <GameDevelopment />
 
       {/* ASO & Digital Marketing */}
-      <div className='subservices'>
+      <div className='subservices' id='asodigitalmarketing'>
         <h2>ASO & Digital Marketing</h2>
       </div>
-      <ASO/>
+      <ASO />
 
-      {/* AI and Chatbots, Machine Learning, Gen AI, Business AI*/}
-      <div className='subservices'>
+      {/* AI and Chatbots, Machine Learning, Gen AI, Business AI */}
+      <div className='subservices' id='aichatbots'>
         <h2>AI and Chatbots, Machine Learning, Gen AI, Business AI</h2>
       </div>
-      <AIChatbot/>
+      <AIChatbot />
 
-      {/* Web Applications*/}
-      <div className='subservices'>
+      {/* Web Applications */}
+      <div className='subservices' id='webapplications'>
         <h2>Web Applications</h2>
       </div>
-      <WebApplications/>
+      <WebApplications />
 
-      {/* Simulators & VR/AR*/}
-      <div className='subservices'>
+      {/* Simulators & VR/AR */}
+      <div className='subservices' id='simulators'>
         <h2>Simulators & VR/AR</h2>
       </div>
-      <Simulators/>
+      <Simulators />
 
-      {/* Business Automation*/}
-      <div className='subservices'>
-        <h2> Business Automation</h2>
+      {/* Business Automation */}
+      <div className='subservices' id='businessautomation'>
+        <h2>Business Automation</h2>
       </div>
-      <BusinessAutomation/>
+      <BusinessAutomation />
 
-      {/* Design Category*/}
-      <div className='subservices'>
+      {/* Design Category */}
+      <div className='subservices' id='designcategory'>
         <h2>Design Category</h2>
       </div>
-      <Design/>
-
-    {/* Market Place Cards */}
-    {/* <section id='MarketPlaceCards'>
-      <div className='main-body-content  '>
-      <h1 class="Market-cards-heading ">All In One Solution By Pakistan's First Online Business Market Place</h1>
-      <div>
-      <MarketPlaceCards/>
-      </div>
-      </div>
-    </section>
-     */}
-
-    
-    {/* AI Integration
-    <section id='Ai-Integration'>
-      <div className='content'>
-      <h1 class="Market-cards-heading">Streamlined Sub-Services for Effortless AI Integration: A Comprehensive Approach </h1>
-      </div>
-      <div className='mt-5'>
-      <AiIntegration/>
-      </div>
-    </section> */}
-    
-    {/* Ai Learning */}
-    {/* <section id='Ai-Learning'>
-    <div className='content'>
-      <h1 class="Market-cards-heading">Exploring the Depths: Subservices Unveiled in AI Learning</h1>
-      </div>
-      <div className='mt-5'>
-      <AiLearning/>
-      </div>
-      </section> */}
-   
-
-    {/* Embedded System */}
-    {/* <section id='Embedded-System'>
-      <div className='content'>
-      <h1 class="Market-cards-heading mb-5">Sub-Services in R&D and Embedded Systems: Driving Innovation and Efficiency</h1>
-      </div>
-      <EmbeddedSystem/>
-    </section> */}
-
-    {/* <section id='Ecomerce'>
-    <div className='content'>
-      <h1 class="Market-cards-heading">Comprehensive Ecommerce Solutions: Elevate Your Online Business</h1>
-      </div>
-      <div className='mt-5'>
-      <Ecommerce/>
-      </div>
-      </section> */}
-
-      {/* <section id='Search-Optimzation'>
-    <div className='content'>
-      <h1 class="Market-cards-heading">Optimize Your App Store Presence: Detailed ASO Subservices</h1>
-      </div>
-      <div className='mt-5'>
-      <SearchOptimization/>
-      </div>
-      </section> */}
-
-    {/* Domain cards */}
-    {/* <section id='DomainCards'>
-      <div className='content'>
-      <h1 class="Market-cards-heading ">Exploring AI Frontiers: <br/>Diverse Domains, Ethical Considerations, and NLP Advancements</h1>
-      <div className='DoaminCardGridContainer'>
-      <ServiceDomainCards/>
-      </div>
-      </div> */}
-    {/* </section> */}
-      
+      <Design />
     </div>
-  )
+  );
 }

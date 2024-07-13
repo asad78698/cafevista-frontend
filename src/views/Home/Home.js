@@ -3,13 +3,14 @@ import Typed from 'typed.js';
 import { useState } from 'react';
 import './Home.css';
 import videoUrl from './video.mp4';
-import ScheduleMeeting from './ScheduleMeeting.gif';
-import ServicesCard from '../../Reusable/ServicesCard';
+// import ScheduleMeeting from './ScheduleMeeting.gif';
+// import ServicesCard from '../../Reusable/ServicesCard';
 import ScheduleMetting from '../../components/ScheduleMeeting/ScheduleMetting';
 import ChooseUsCards from '../../Reusable/ChooseUsCards';
-import ProjectCard from '../../Reusable/ProjectCard';
+// import ProjectCard from '../../Reusable/ProjectCard';
 import Review from '../../Reusable/Review';
 import Slider from '../../Reusable/FeaturesCarousel';
+import contact from "../../assets/Contactimage.png";
 import RoadMapCards from '../../Reusable/RoadMapCards';
 import ProjectsCards from '../../Reusable/ProjectsCards';
 import background from "../../assets/background.png";
@@ -50,7 +51,7 @@ export default function Home() {
   return (
     <>
     <div className="home-container">
-      <video autoPlay loop muted className="background-video">
+      <video autoPlay loop muted className="background-video ">
         <source src={videoUrl} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -257,8 +258,9 @@ export default function Home() {
                 <p class="section-heading">Our Projects</p>
                 <h1 class="display-5 mb-2 highlight Project-heading ">We Have Completed Latest Projects</h1>
             </div>
-            <ProjectsCards/>
+            
       </div>
+      <ProjectsCards/>
     </section>
     
     {/* Schedule a Metting */}
@@ -272,7 +274,7 @@ export default function Home() {
           <br/>Contact us today!
           </p>
           <div style={{display:"flex", justifyContent:"center"}}>
-              <img src={ScheduleMeeting} style={{height:'320px', width:'320px'}}/>
+              <img src={contact} style={{height:'320px', width:'320px'}}/>
           </div>    
         </div>
         <div className='scheduleMeeting-right-column'>

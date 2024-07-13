@@ -1,4 +1,6 @@
-
+[id] {
+    scroll-margin-top: 100px; /* Example value */
+  }
 
 .services-background {
     width: 100%;

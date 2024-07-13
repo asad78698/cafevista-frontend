@@ -265,19 +265,20 @@ export default function About() {
        </div>
        
       </section>
-      <div className='Note_container'>
-      <div className='Note content mt-0'>
-        
-      <p className='text-center'>Join the ranks of businesses that have already chosen CaféVist@AI as their ally in the realm
-                            of AI and innovation. Experience the transformative power of AI Avengers and let us guide
-                            you towards a future brimming with possibilities.</p>
-                            
-       <span className='text-center'>For a more in-depth understanding of how our AI solutions can benefit your business, 
-       <Link to="/contactus" className="btn btn-link  ms-3">
-                        Contact Us</Link>
-                    .</span>
-       </div>
-       </div>
+ {/* Note Section */}
+ <div className='Note_container'>
+        <div className='Note content mt-0'>
+          <p className='text-center'>
+            Join the ranks of businesses that have already chosen CaféVist@AI as their ally in the realm
+            of AI and innovation. Experience the transformative power of AI Avengers and let us guide
+            you towards a future brimming with possibilities.
+          </p>
+          <span className='text-center'>
+            For a more in-depth understanding of how our AI solutions can benefit your business, 
+            <Link to="/contactus" className="btn btn-link ms-3">Contact Us</Link>. {/* Link to navigate to contact us */}
+          </span>
+        </div>
+        </div>
     </>
   )
 }

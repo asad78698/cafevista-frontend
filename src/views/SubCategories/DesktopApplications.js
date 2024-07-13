@@ -7,19 +7,19 @@ import app from "../../assets/application.png";
 import mobile from "../../assets/Mobile.png";
 import ecommerce from "../../assets/ecommerce.png";
 import animation from "../../assets/Animation.png";
-const DesktopApplications = () => {
-  // Array containing card data
-  const cards = [
-    { id: 1, text: 'Desktop Applications', image: web, backgroundColor: '#00732e' },
-    { id: 2, text: 'Mobile Applications', image: mobile, backgroundColor: '#240750' },
-    { id: 3, text: 'Web Applications', image: app, backgroundColor: '#003912' },
-    { id: 4, text: 'Cross Platform Applications', image: cross, backgroundColor: '#4d1727' },
-    { id: 5, text: 'Web Portals', image: portal, backgroundColor: '#215330' },
-    { id: 6, text: 'Web-based Automation', image: animation, backgroundColor: '#421300' },
-    { id: 7, text: 'E-commerce', image: ecommerce, backgroundColor: '#12372A'},
-    // Add more cards as needed
-  ];
 
+const cards = [
+  { id: 1, text: 'Desktop Applications', image: web, backgroundColor: '#00732e' },
+  { id: 2, text: 'Mobile Applications', image: mobile, backgroundColor: '#240750' },
+  { id: 3, text: 'Web Applications', image: app, backgroundColor: '#003912' },
+  { id: 4, text: 'Cross Platform Applications', image: cross, backgroundColor: '#4d1727' },
+  { id: 5, text: 'Web Portals', image: portal, backgroundColor: '#215330' },
+  { id: 6, text: 'Web-based Automation', image: animation, backgroundColor: '#421300' },
+  { id: 7, text: 'E-commerce', image: ecommerce, backgroundColor: '#12372A'},
+  // Add more cards as needed
+];
+
+const DesktopApplications = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalSlides = cards.length;
   const cardsToShow = 6;
@@ -48,8 +48,10 @@ const DesktopApplications = () => {
       <div className="carousel-content">
         {getVisibleCards().map((card) => (
           <div key={card.id} className="carousel-card" style={{ backgroundColor: card.backgroundColor }}>
-            <img src={card.image} alt={card.text} />
-            <p>{card.text}</p>
+            <a className="card-link" href={`/contactus?project=${encodeURIComponent(card.text)}`}>
+              <img src={card.image} alt={card.text} />
+              <p>{card.text}</p>
+            </a>
           </div>
         ))}
       </div>
