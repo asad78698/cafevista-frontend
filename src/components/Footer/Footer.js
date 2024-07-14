@@ -9,6 +9,9 @@ export default function Footer() {
 
     const getEmail = async () => {
        try {
+            if(email === ""){
+            return setSubscribeMessage("Please Enter Email")
+        }
 
         const response = await fetch('https://cafevista-backend.vercel.app/newsletter', {
             method : "POST",
