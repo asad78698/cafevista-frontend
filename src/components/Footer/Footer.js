@@ -87,7 +87,7 @@ export default function Footer() {
                                     setemail(e.target.value)
                                 }
 
-                            } required class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="text"
+                            } required class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="email"
                                 placeholder="Your email" />
                             <button onClick={getEmail} 
                             type="button"
