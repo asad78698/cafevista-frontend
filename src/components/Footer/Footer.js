@@ -10,7 +10,7 @@ export default function Footer() {
     const getEmail = async () => {
        try {
 
-        const response = await fetch('http://127.0.0.1:8000/newsletter', {
+        const response = await fetch('https://cafevista-backend.vercel.app/newsletter', {
             method : "POST",
             headers:{
                 "Content-Type": "application/json"
