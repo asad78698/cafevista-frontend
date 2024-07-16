@@ -9,6 +9,7 @@ import NavigationBar from './components/NavigationBar/NavigationBar';
 import Footer from './components/Footer/Footer';
 import RegisterUser from './views/Registration/RegisterUser';
 import RegisterCompany from './views/Registration/RegisterCompany';
+import CertificateVerification from './views/CertificateVerify/CertificateVerify';
 export default function Router() {
   return (
     <div>
@@ -23,7 +24,6 @@ export default function Router() {
             <Route path='/registeruser' element={<RegisterUser/>}/>
             <Route path='/registercompany' element={<RegisterCompany/>}/>
             <Route path='/certificate-verification' element={<CertificateVerification/>}/>
-
         </Routes>
         <Footer/>
    </div>
