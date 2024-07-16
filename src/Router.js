@@ -22,6 +22,8 @@ export default function Router() {
             <Route path="/terms" element={<Terms/>}/>
             <Route path='/registeruser' element={<RegisterUser/>}/>
             <Route path='/registercompany' element={<RegisterCompany/>}/>
+            <Route path='/certificate-verification' element={<CertificateVerification/>}/>
+
         </Routes>
         <Footer/>
    </div>
