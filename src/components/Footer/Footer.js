@@ -9,11 +9,12 @@ export default function Footer() {
 
     const getEmail = async () => {
        try {
-            if(email === ""){
+
+        if(email === ""){
             return setSubscribeMessage("Please Enter Email")
         }
 
-        const response = await fetch('https://cafevista-backend.vercel.app/newsletter', {
+        const response = await fetch('http://127.0.0.1:8000/newsletter', {
             method : "POST",
             headers:{
                 "Content-Type": "application/json"
@@ -79,6 +80,7 @@ export default function Footer() {
                         <Link className="btn btn-link" to="./service">Our Services</Link>
                         <Link className="btn btn-link" to="./terms">Terms & Condition</Link>
                         <Link className="btn btn-link" to="./contactus">Support</Link>
+                        <Link className="btn btn-link" to="/certificate-verification">Verify Certificate</Link>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h4 class="text-white mb-4">Newsletter</h4>
@@ -90,7 +92,7 @@ export default function Footer() {
                                     setemail(e.target.value)
                                 }
 
-                            } required class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="email"
+                            } required class="form-control bg-white border-0 w-100 py-3 ps-4 pe-5" type="text"
                                 placeholder="Your email" />
                             <button onClick={getEmail} 
                             type="button"
