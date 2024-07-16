@@ -9,7 +9,7 @@ const CertificateVerification = () => {
 
     const checkCertificate = async () => {
         try {
-            const response = await fetch('http://localhost:8000/verifyCertificate', {
+            const response = await fetch('https://cafevista-backend.vercel.app/verifyCertificate', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
