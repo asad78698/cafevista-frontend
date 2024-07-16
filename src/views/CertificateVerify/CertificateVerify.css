@@ -1,0 +1,104 @@
+.mainHeading{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+
+.certificate-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-top: 10px;
+    border: 1px solid #000;
+}
+
+.certificate-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+}
+
+.certificate-card p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 8px;
+}
+
+.certificate-card .verification-message {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 8px;
+    color: #04316D;
+}
+
+.certificate-card .verification-date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    padding: 8px;
+    color: #04316D;
+}
+.verification-message {
+}
+.verification-date{
+ 
+}
+
+.certificate-details p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;   
+    padding: 8px; 
+}
+
+.certHeader{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.mainDiv{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.inputField{
+   width: 100%;
+
+}
+input{
+    width: 40%;
+    padding: 10px;
+    margin: -10px 0;
+    margin-bottom: 16px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #04316D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-bottom: 4px;
+}
